@@ -50,7 +50,7 @@ user_management_api/
 │       └── userModel.js
 ├── docs/
 │   ├── UserManagementAPI.postman_collection.json
-│   └── screenshot_endpoint.png
+│   └── screenshot.png
 
 ````
 
