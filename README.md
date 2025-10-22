@@ -1,4 +1,3 @@
-```markdown
 # User Management API
 
 REST API untuk manajemen user dengan fitur lengkap:
@@ -139,8 +138,7 @@ Server akan berjalan di `http://localhost:5000/`
 
 ## **Screenshot Dokumentasi**
 
-* Semua screenshot endpoint disimpan di folder `docs/`
-* Contoh: `docs/register.png`, `docs/login.png`, `docs/get_profile.png`
+* Screenshot sebelum dan setelah fitur updates di folder `docs/`
 
 ---
 
