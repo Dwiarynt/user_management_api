@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "087f3265-50d8-436d-8a13-12587c2f2f80",
+		"name": "Tugas 3 : UserManagement API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49156647",
+		"_collection_link": "https://dwiariyanti613-3082681.postman.co/workspace/Dwi's-Workspace~b1137c89-5510-4edd-8f13-24f3f7bdcfb4/collection/49156647-087f3265-50d8-436d-8a13-12587c2f2f80?action=share&source=collection_link&creator=49156647"
+	},
+	"item": [
+		{
+			"name": "User-Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"dwiaryn\",\r\n  \"email\": \"dwiaryn@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"dwiaryn@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiZHdpYXJ5bkBnbWFpbC5jb20iLCJpYXQiOjE3NjExMzMyNDIsImV4cCI6MTc2MTE0MDQ0Mn0.S_G3OFhQt0fAQnj75ujUbUzxsakYBbW6P_Y5McMX4O0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"dwiaryn_updated\",\r\n  \"email\": \"dwiar@gmail.com\",\r\n  \"password\": \"newpassword123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Avatar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiZHdpYXJ5bkBnbWFpbC5jb20iLCJpYXQiOjE3NjExMzMwOTUsImV4cCI6MTc2MTE0MDI5NX0.tkpI11kO3fcC8NZYtiK_tKEITbcD13b_npfOQC4zyFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "file",
+							"type": "file",
+							"src": "/C:/Users/dwiar/Downloads/file.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/avatar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"avatar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Acc",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoiZHdpYXJ5bkBnbWFpbC5jb20iLCJpYXQiOjE3NjExMzMyNDIsImV4cCI6MTc2MTE0MDQ0Mn0.S_G3OFhQt0fAQnj75ujUbUzxsakYBbW6P_Y5McMX4O0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/users/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
